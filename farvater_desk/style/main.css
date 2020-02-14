@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #F5F5F5;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+/* -----------------------HEADER */
+/* ------hightHeader */
+header {
+    background: #ffffff;
+}
+
+#highHeader {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #EDEDED;
+    padding: 28px 25px;
+}
+
+.leftside {
+    position: absolute;
+    display: flex;
+    left: 25px;
+}
+
+.notification {
+    position: relative;
+    margin: 0px 25px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    left: 13px;
+    top: -3px;
+    background-color: #EE2316;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.order {
+    display: flex;
+}
+
+.order p {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    color: #333333;
+}
+
+.logo {
+    width: 230px;
+    height: 45px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.rightside {
+    position: absolute;
+    right: 40px;
+    display: flex;
+}
+
+.lang:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.lang {
+    margin: 0 40px 0 25px;
+    display: inline-block;
+    transition: all .3s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.lang .select {
+    cursor: pointer;
+    display: block;
+    display: flex;
+}
+
+.lang .select p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    text-align: right;
+    margin-left: 3px;
+    color: #333333;
+}
+
+.lang .select>i {
+    position: absolute;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    right: -13px;
+    top: 8px;
+
+}
+
+.lang.active .select>i {
+    transform: rotate(-180deg)
+}
+
+.lang .dropdown-menu {
+    font-size: 14px;
+    position: absolute;
+    background-color: #fff;
+    width: 65px;
+    left: 0;
+    text-align: center;
+    margin-top: 39px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    max-height: max-content;
+    overflow-y: auto;
+    z-index: 9
+}
+
+.lang .dropdown-menu li {
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer
+}
+
+.lang .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+
+.lang .dropdown-menu li:hover {
+    background-color: #00AEEF;
+    color: #ffffff;
+}
+
+.lang .dropdown-menu li:active {
+    background-color: #00AEEF
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    margin-top: -10px;
+    margin-right: 7px;
+    border-radius: 50%;
+}
+
+.profileFunction {
+    display: flex;
+    position: relative;
+}
+
+.profileFunction p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #333333;
+}
+
+
+.profile:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.profile {
+    margin: 0 40px 0 25px;
+    display: inline-block;
+    transition: all .3s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.profile .choiseFunc {
+    cursor: pointer;
+    display: block;
+    display: flex;
+}
+
+.profile .choiseFunc p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    text-align: right;
+    margin-left: 3px;
+    color: #333333;
+}
+
+.profile .choiseFunc>.profileFunction i {
+    position: absolute;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    right: -13px;
+    top: 8px;
+
+}
+
+.profile.active .choiseFunc>.profileFunction i {
+    transform: rotate(-180deg)
+}
+
+.profile .dropdown-func {
+    font-size: 14px;
+    position: absolute;
+    background-color: #fff;
+    width: 262px;
+    right: -55px;
+    text-align: left;
+    margin-top: 32px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    max-height: max-content;
+    overflow-y: auto;
+    z-index: 9;
+    color: #333;
+}
+
+.profile .dropdown-func li {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.profile .dropdown-func {
+    padding: 0;
+    list-style: none
+}
+
+.profile .dropdown-func li:hover {
+    background-color: #00AEEF;
+    color: #ffffff;
+}
+
+.profile .dropdown-func li:active {
+    background-color: #00AEEF
+}
+
+.notice {
+    padding: 1px 4px;
+    background: #00AEEF;
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    right: 15;
+}
+
+.exit {
+    color: #00AEEF;
+}
+
+/* ------downHeader */
+
+#downHeader {
+    max-width: 1128px;
+    display: block;
+    margin: 0 auto;
+    height: 237px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0 156px;
+}
+
+#downHeader .nav {
+    box-sizing: border-box;
+    padding-top: 41px;
+    display: flex;
+    width: 100%;
+    max-width: 1128px;
+    height: 76px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+#downHeader .nav a {
+    margin-right: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(51, 51, 51, 0.56);
+    transition: ease all 0.2s;
+}
+
+#downHeader .nav .navActive {
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+#downHeader .nav a:hover {
+    color: #333333;
+}
+
+#downHeader h1 {
+    margin: 32px 0 34px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+
+
+    color: #464646;
+}
+
+.choiseBtn {
+    width: 375px;
+    height: 32px;
+    box-sizing: border-box;
+    border: 1px solid #00AEEF;
+    border-radius: 16px;
+    display: flex;
+}
+
+.midl {
+    border-left: 1px solid #00AEEF;
+    border-right: 1px solid #00AEEF;
+}
+
+.choiseBtn .choiseEl {
+    width: 125px;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: #00AEEF;
+    cursor: pointer;
+}
+
+.choiseBtn .choiseElActive {
+    background: #00AEEF;
+    color: #fff;
+}
+
+/* -----------------------MAIN */
+.container {
+    padding: 0 156px;
+    display: block;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+
+main .waiting {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 21px 0px 11px;
+
+
+    color: rgba(0, 0, 0, 0.56);
+}
+
+#mainBody {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+/* ------ mainLeftSide*/
+
+.tourCard {
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 360px;
+    height: 234px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.tourCardActive {
+    box-shadow: 0px 1px 10px rgba(0, 174, 239, 0.5);
+}
+
+.tourData {
+    padding: 17px 15px 12px;
+    box-sizing: border-box;
+    height: 49px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.tourData p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.tourBody {
+    box-sizing: border-box;
+    padding: 15px;
+
+}
+
+.tourBody h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.88);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tourBody .hotelStatus {
+    display: flex;
+    position: relative;
+    margin-top: 12px;
+}
+
+.hotelStatus p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9E9E9E;
+}
+
+.hotelStatus .raiting {
+    position: absolute;
+    right: 0;
+}
+
+.tourBody .hotelMembers {
+    display: flex;
+    position: relative;
+    margin-top: 8px;
+}
+
+.hotelMembers .fly {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+
+.tourText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.hotelMembers svg {
+    margin-right: 9px;
+}
+
+.hotelPrice {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.hotelPrice p {
+    position: absolute;
+    right: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFB500;
+}
+
+.hotelPrice h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #464646;
+}
+
+/* ------ fullCardInfo*/
+
+.fullCardInfo {
+    margin-left: 24px;
+    box-sizing: border-box;
+    width: 744px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.fullCardData {
+    padding: 17px 24px 12px;
+    box-sizing: border-box;
+    height: 49px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.fullCardData p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.fullCardBody {
+    padding: 12px 24px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.fullCardBody h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #464646;
+}
+
+.fullCardBody .hotelStatus {
+    display: flex;
+    position: relative;
+    margin-top: 8px;
+}
+
+.fullCardBody .hotelStatus h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #9E9E9E;
+    margin-right: 14px;
+}
+
+.fullRaiting {
+    padding-top: 2px;
+}
+
+.hotelInfo {
+    display: flex;
+    margin-top: 14px;
+}
+
+.info {
+    margin-left: 27px;
+}
+
+.info .infoPoint {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.info .infoPoint svg {
+    margin-right: 8px;
+}
+
+.info .infoPoint p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+    margin-right: 8px;
+}
+
+.info .infoPoint a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
+}
+
+.fullCardBody .hotelPrice {
+    display: flex;
+    margin-top: 14px;
+}
+
+.fullCardBody .hotelPrice h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: #464646;
+
+    margin-right: 12px;
+}
+
+.fullCardBody .hotelPrice h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFB500;
+}
+
+.btnBlock {
+    margin-top: 15px;
+    display: flex;
+}
+
+.btnBlock button {
+    cursor: pointer;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.payOnline {
+    margin-right: 10px;
+    width: 163px;
+    height: 44px;
+    background: linear-gradient(270deg, #00D7F8 0%, #00AEEF 100%);
+    border-radius: 3px;
+    border-width: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.downloadInvoice {
+    width: 263px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #00AEEF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #00AEEF;
+}
+
+.cancelOrder {
+    margin-left: 25px;
+    width: 212px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.56);
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+
+
+.paymentsAndDoc {
+    box-sizing: border-box;
+    padding: 0px 24px 24px;
+}
+
+.padTitle {
+    box-sizing: border-box;
+    height: 64px;
+    display: flex;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.pad {
+    margin-right: 22px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(51, 51, 51, 0.56);
+}
+
+.padActive {
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.padBodyBlock {
+    padding: 15px 0px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.padBodyBlock p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.blockTit {
+    color: #333333 !important;
+    font-weight: 500;
+}
+
+.blockHref {
+    display: flex;
+    position: relative;
+}
+
+.href {
+    position: absolute;
+    right: 0;
+}
+
+.href a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 25px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #00AEEF;
+}
+
+.paymentsAndDoc .btnBlock {
+    margin-top: 20px;
+}
+
+.paymentsAndDoc .btnBlock p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 44px;
+    color: #333333;
+    margin-left: 16px;
+}
+
+/* -----------------------FOOTER */
+footer {
+    padding-top: 60px !important;
+    padding-bottom: 30px !important;
+    background: #fff;
+}
+
+.footLogo {
+    margin-bottom: 40px;
+}
+
+.blockCombo {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footBlock {
+    width: 17%;
+    margin: 0 auto 0 0;
+}
+
+.footBlock p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.56);
+}
+
+.footBlock ol {
+    cursor: pointer;
+    font-size: 12px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.copyrigth {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.56);
+    margin-bottom: 20px;
+}
