@@ -44,6 +44,58 @@ header {
     left: 25px;
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.burgerNav {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.2s;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #00AEEF;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
 .notification {
     position: relative;
     margin: 0px 25px;
@@ -53,7 +105,7 @@ header {
     height: 5px;
     width: 5px;
     left: 13px;
-    top: -3px;
+    top: -1px;
     background-color: #EE2316;
     border-radius: 50%;
     display: inline-block;
@@ -87,7 +139,7 @@ header {
 
 .rightside {
     position: absolute;
-    right: 40px;
+    right: 0px;
     display: flex;
 }
 
@@ -199,7 +251,7 @@ header {
 }
 
 .profile {
-    margin: 0 40px 0 25px;
+    margin: 0 40px 0 0px;
     display: inline-block;
     transition: all .3s ease;
     position: relative;
@@ -241,7 +293,7 @@ header {
     position: absolute;
     background-color: #fff;
     width: 262px;
-    right: -55px;
+    right: -35px;
     text-align: left;
     margin-top: 32px;
     overflow: hidden;
@@ -501,7 +553,6 @@ main .waiting {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: #FFB500;
 }
 
 .hotelPrice h4 {
@@ -512,7 +563,17 @@ main .waiting {
     color: #464646;
 }
 
+.howManyTour {
+    display: none;
+}
+
+.caruselNavNext {
+    display: none;
+}
+
 /* ------ fullCardInfo*/
+
+
 
 .fullCardInfo {
     margin-left: 24px;
@@ -571,6 +632,11 @@ main .waiting {
     padding-top: 2px;
 }
 
+.fullRaiting svg {
+    width: 20px;
+    height: 19px;
+}
+
 .hotelInfo {
     display: flex;
     margin-top: 14px;
@@ -622,12 +688,21 @@ main .waiting {
     margin-right: 12px;
 }
 
+.waitConfirm {
+    display: block;
+    color: #FFB500;
+}
+
+.confitmPay {
+    display: none;
+    color: #00AEEF;
+}
+
 .fullCardBody .hotelPrice h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
-    color: #FFB500;
 }
 
 .btnBlock {
@@ -745,6 +820,10 @@ main .waiting {
     right: 0;
 }
 
+.hrefMob {
+    display: none;
+}
+
 .href a {
     font-style: normal;
     font-weight: 500;
@@ -810,4 +889,627 @@ footer {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.56);
     margin-bottom: 20px;
+}
+
+@media (max-width: 1158px) {
+
+    #highHeader {
+        height: 40px;
+        padding: 15px 15px;
+    }
+
+    .leftside {
+        left: 15px;
+    }
+
+    .order {
+        display: none;
+    }
+
+    .logo {
+        width: 150px;
+        height: 30px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 30px;
+    }
+
+    .rightside {
+        position: absolute;
+        right: 15px;
+        display: flex;
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .tel {
+        display: none;
+    }
+
+    .profile {
+        margin: 0px;
+    }
+
+    .profile img {
+        width: 28px;
+        height: 28px;
+        margin-top: -10px;
+        margin-right: 0px;
+    }
+
+    .profileFunction {
+        display: none;
+    }
+
+    /* ------downHeader */
+
+    #downHeader {
+        display: block;
+        margin: 0 auto;
+        height: 237px;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 0 15px;
+    }
+
+    #downHeader .nav {
+        box-sizing: border-box;
+        padding-top: 41px;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        max-width: 100%;
+        height: 76px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    #downHeader .nav a {
+        margin-right: 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(51, 51, 51, 0.56);
+        transition: ease all 0.2s;
+    }
+
+    #downHeader .nav .navActive {
+        color: #333333;
+        border-bottom: 1px solid #333333;
+    }
+
+    #downHeader .nav a:hover {
+        color: #333333;
+    }
+
+    #downHeader h1 {
+        margin: 32px 0 34px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 37px;
+
+
+        color: #464646;
+    }
+
+    .choiseBtn {
+        width: 375px;
+        height: 32px;
+        box-sizing: border-box;
+        border: 1px solid #00AEEF;
+        border-radius: 16px;
+        display: flex;
+    }
+
+    .midl {
+        border-left: 1px solid #00AEEF;
+        border-right: 1px solid #00AEEF;
+    }
+
+    .choiseBtn .choiseEl {
+        width: 125px;
+        text-align: center;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #00AEEF;
+        cursor: pointer;
+    }
+
+    .choiseBtn .choiseElActive {
+        background: #00AEEF;
+        color: #fff;
+    }
+
+    /* -----------------------MAIN */
+    .container {
+        padding: 0 15px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    main .waiting {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 21px 0px 11px;
+
+
+        color: rgba(0, 0, 0, 0.56);
+    }
+
+    #mainBody {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    /* ------ mainLeftSide*/
+
+    .tourCard {
+        width: 100%;
+    }
+
+    /* ------ fullCardInfo*/
+
+    .fullCardInfo {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+
+    .notification {
+        display: none;
+    }
+
+    /* ------downHeader */
+
+    #downHeader {
+        display: block;
+        margin: 0 auto;
+        height: 176px;
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 0 15px;
+    }
+
+    #downHeader .nav {
+        box-sizing: border-box;
+        padding-top: 16px;
+        display: flex;
+        width: 1128px;
+        overflow-x: scroll;
+        max-width: 100%;
+        height: 52px;
+        border-bottom: none;
+    }
+
+    #downHeader .nav::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+
+
+    #downHeader .nav a {
+        width: 50%;
+        white-space: nowrap;
+        margin: 0 12px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(51, 51, 51, 0.56);
+        transition: ease all 0.2s;
+    }
+
+    #downHeader .nav .navActive {
+        scroll-margin: 30vw;
+        color: #333333;
+        border-bottom: 1px solid #00AEEF;
+    }
+
+    #downHeader .nav a:hover {
+        color: #333333;
+    }
+
+    #downHeader h1 {
+        margin: 18px 0 20px;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 39px;
+        text-align: center;
+    }
+
+    .choiseBtn {
+        width: 295px;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+    .choiseBtn .choiseEl {
+        width: 33, 3333%;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    /* -----------------------MAIN */
+    .container {
+        padding: 0 15px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    main .waiting {
+        display: none;
+    }
+
+    #mainBody {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    /* ------ mainLeftSide*/
+    .howManyTour {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        color: rgba(0, 0, 0, 0.56);
+    }
+
+    #caruselNavNext {
+        width: 38px;
+        height: 38px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        bottom: 40%;
+        display: block;
+        box-sizing: border-box;
+        padding:13px 15px 14px 16px; 
+    }
+
+    .mainLeftSide {
+        position: relative;
+        margin-top: 0px;
+        display: flex;
+        overflow-x: hidden;
+        /* overflow-x: auto; */
+        padding-top: 24px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mainLeftSide::-webkit-scrollbar {
+        width: 0;
+    }
+
+
+    .tourCard {
+        display: block;
+        margin: 0 40px 11px;
+        width: 264px;
+    }
+
+    .tourData {
+        padding: 11px 15px;
+        height: 38px;
+    }
+
+    .tourData p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .tourBody {
+        box-sizing: border-box;
+        padding: 10px 15px 13px;
+
+    }
+
+    .hotelStatus p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .hotelStatus svg {
+        height: 12px;
+        width: 12px;
+    }
+
+    .hotelStatus .raiting {
+        position: absolute;
+        right: 0;
+    }
+
+    .tourBody .hotelMembers {
+        margin-top: 6px;
+    }
+
+    .hotelMembers .hotelMembers svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .hotelMembers .fly svg {
+        width: 13px;
+        height: 13px;
+        margin-top: 3px;
+    }
+
+    .tourText {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .hotelMembers svg {
+        margin-right: 4px;
+    }
+
+    .hotelPrice {
+        position: relative;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .hotelPrice p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .hotelPrice h4 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* ------ fullCardInfo*/
+
+    .fullCardInfo {
+        width: 100%;
+
+    }
+
+    .fullCardData {
+        padding: 11px 15px 10px;
+        height: 38px;
+    }
+
+    .fullCardData p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .fullCardBody {
+        padding: 10px 15px 0px;
+        border-bottom: none;
+    }
+
+    .fullCardBody h1 {
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+    }
+
+    .fullCardBody .hotelStatus {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .fullCardBody .hotelStatus h3 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 19px;
+    }
+
+    .fullRaiting {
+        padding-top: 0px;
+    }
+
+    .fullRaiting svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hotelInfo img {
+        display: none;
+    }
+
+    .hotelInfo {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .info {
+        margin-left: 0px;
+    }
+
+    .info .infoPoint {
+        margin-bottom: 10px;
+    }
+
+    .info .infoPoint svg {
+        margin-right: 6px;
+    }
+
+    .info .infoPoint p {
+        font-size: 14px;
+    }
+
+    .fullCardBody .hotelPrice {
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .fullCardBody .hotelPrice h2 {
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 12px;
+    }
+
+    .confitmPay {
+        display: block;
+    }
+
+    .waitConfirm {
+        display: none;
+    }
+
+    .fullCardBody .hotelPrice h3 {
+        font-size: 12px;
+        line-height: 24px;
+        margin: 0 0 0 auto;
+    }
+
+    .btnBlock {
+        margin-top: 11px;
+        flex-direction: column;
+    }
+
+    .btnBlock button {
+        cursor: pointer;
+        outline: -webkit-focus-ring-color auto 0px;
+    }
+
+    .payOnline {
+        margin-right: 0px;
+        margin-bottom: 14px;
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .downloadInvoice {
+        width: 100%;
+        height: 75px;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 19px;
+        padding: 0 35px;
+    }
+
+    .cancelOrder {
+        margin-left: 0px;
+        width: 100%;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+
+
+    .paymentsAndDoc {
+        box-sizing: border-box;
+        padding: 0px 15px 17px;
+    }
+
+    .padTitle a {
+        width: 50%;
+        text-align: center;
+    }
+
+    .pad {
+        margin-right: 0px;
+    }
+
+    .padTitle {
+        margin-bottom: 0px;
+    }
+
+
+    .padBodyBlock p {
+        font-size: 14px;
+    }
+
+
+    .blockHref {
+        flex-direction: column;
+        position: initial;
+    }
+
+    .href {
+        display: none;
+    }
+
+    .hrefMob {
+        display: block;
+        margin-top: 6px;
+    }
+
+    .hrefMob a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #00AEEF;
+    }
+
+    /* -----------------------FOOTER */
+    footer {
+        padding-top: 40px !important;
+        padding-bottom: 30px !important;
+        background: #fff;
+    }
+
+    .footLogo {
+        width: 170px;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    .footLogo svg {
+        width: 170px;
+    }
+
+    .blockCombo {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .footBlock {
+        width: 100%;
+    }
+
+    .blockCountry {
+        display: none;
+    }
+
+    .footBlock p {
+        text-align: center;
+        text-decoration: underline;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .footBlock ul {
+        display: none;
+    }
+
+    .firstCop {
+        display: none;
+    }
+
+    .copyrigth {
+        text-align: center;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.56);
+        margin-bottom: 20px;
+    }
 }

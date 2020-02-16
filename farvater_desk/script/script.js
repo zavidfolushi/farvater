@@ -1,3 +1,16 @@
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("overlay").style.display = "block";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("overlay").style.display = "none";
+}
+
+// /------------------------
+
 $('.lang').click(function () {
     $(this).attr('tabindex', 1).focus();
     $(this).toggleClass('active');
@@ -12,7 +25,7 @@ $('.lang .dropdown-menu li').click(function () {
     $(this).parents('.lang').find('input').attr('value', $(this).attr('id'));
 });
 
-
+// /----------------------------
 
 $('.profile').click(function () {
     $(this).attr('tabindex', 1).focus();
@@ -27,3 +40,7 @@ $('.profile .dropdown-func li').click(function () {
     $(this).parents('.profile').find('span').text($(this).text());
     $(this).parents('.profile').find('input').attr('value', $(this).attr('id'));
 });
+
+window.onload = function () {
+    document.all.navActive.scrollIntoView(true);
+}
